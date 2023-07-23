@@ -1,4 +1,4 @@
-![image](https://github.com/DataRoastery/Final_Stage/assets/132192429/8e65b13d-4b84-46b7-ab3e-4e529bf7deb6)# Final_Project Stage 1 Data Roastery
+# Final_Project Stage 1 Data Roastery
 
 ## 1. Descriptive Statistics
 Kesimpulan :
