@@ -2,6 +2,8 @@
 
 ## 1. Descriptive Statistics
 Kesimpulan :
+- Hasil Observasi dari Cek Missing Values adalah tidak ada missing values pada data ini.
+- Hasil Observasi dari Cek Data Duplicated adalah tidak ada duplicate data pada data ini.
 - Fitur dengan right skew atau positive skew adalah Age, AnnualIncome, ChronicDiseasses, dan TravelInsurance.
 - Fitur dengan left skew atau negative skew adalah FamilyMembers
 - Unnamed: 0 tidak disebutkan dalam kedua skew tersebut karena kami menganggap fitur ini sebagai index.
@@ -15,12 +17,12 @@ Kesimpulan :
 - Tidak terdapat outlier pada data numerical, sehingga tidak perlu dilakukan handling outliers pada stage data preprocessing
 - Age distribusi bimodal perlu dilakukan feature transformation pada stage data preprocessing untuk menjamin kualitas dari algoritma
   annualIncome distribusi mendekati normal
-- familyMembers skew kanan perlu dilakukan feature transformation pada stage data preprocessing untuk menjamin kualitas dari algoritma
+- FamilyMembers skew kanan perlu dilakukan feature transformation pada stage data preprocessing untuk menjamin kualitas dari algoritma
 - ChronicDiseases dan TravelInsurance perlu diubah tipe datanya menjadi categorical, dikarenakan ChronicDiseases dan TravelInsurance hanya berisi 1 dan 0
--Semua fitur kategorik merupakan kategori biner. Untuk sekarang tiidak ada yang tindakan lebih lanjut yang perlu dilakukan 
+- Semua fitur kategorik merupakan kategori biner. Untuk sekarang tiidak ada yang tindakan lebih lanjut yang perlu dilakukan 
 - Tidak ada class imbalanced
 
-## 3. Univariate Analysis
+## 3. Multivariate Analysis
 Kesimpulan : 
 - Dari hasil Striplot terlihat cukup konsisten antara feature EverTraveledAbroad,FrequentFlyer, AnnualIncome dengan label (TravelInsurance)
 - Terdapat pasang-pasangan feature yang berkorelasi satu sama lain yaitu :
@@ -29,13 +31,13 @@ Kesimpulan :
     * EmploymentType dan Annual Income (-0.35)
       (EmplomentType : Private Sector/Self Employed berkorelasi positif dengan Annual Income, Government Sector berkorelasi negatif dengan Annual Income)
     * EverTravelledAbroad dan FrequentFlyer(0.28)
-- Sedangkan feature-feature yang memiliki korelasi tinggi dengan label :
+- Feature-feature yang memiliki korelasi tinggi dengan label :
     * TravelInsurance dan Annual Income(0.40)
     * TravelInsurance dan FrequentFlyer(0.23)
     * TravelInsurance dan EverTravelledAbroad(0.43)
 Rekomendasi : 
-untuk heatmap, tidak ada fitur yang redundant >0.7, jadi tidak perlu ada fitur yang dihilangkan 
-untuk antar feature yang memiliki korelasi tinggi, bisa di explore lebih lanjut
+- Untuk heatmap, tidak ada fitur yang redundant >0.7, jadi tidak perlu ada fitur yang dihilangkan 
+- Untuk antar feature yang memiliki korelasi tinggi, bisa di explore lebih lanjut
 
 ## 4. Business Insight
 - Menargetkan promo penawaran terhadap target pelanggan dengan kriteria
